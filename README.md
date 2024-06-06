@@ -3,7 +3,12 @@ English, Hungarian speech recognition
 
 # English, Hungarian speech recognition
 # Hang szöveggé alakítása angolul és magyarul
-A modellek ".pt" kiterjesztéssel találhatóak meg. Az angol hangfájlokat mellékelem, azokon ki lehet próbálni, hogy néz ki egy pretrainelt modell fittelése.
 
-A magyar hangfelismeréshez elég csak a magyar modellre váltani és a felismerendő .wav állományt megadni. Ehhez minden mást kommentezz ki a python fájlban.
+Az angol és a magyar python szkript is megtalálható, ellenben sem a modellek, sem a hangfájlok nem kerültek be, méretgondok miatt.
+A hangfájlok fejlécét mellékeltem mindkét nyelven, az angolt a nevek alapján meg lehet keresni a neten, honnan lehet letölteni, a magyar fájlok elkészítéséhez pedig mintát adnak.
 
+A modellek alapjául szolgáló backbone-okat, és a modelleket szintén nem tartalmazza a könyvtár, mivel a könyvtárak a megadott név alapján letöltik és a szkript végén lévő sorral lementik helyi meghajtóra a betanított, testreszabott modellt.
+
+A magyar példaszriptben kibővítettem a magyarázatokat. Mivel egy logikus munkamenet, hogy a Google Colabon megy a tanulás, és csak a predikció - azaz a munkavégzésre használt szövegfelismerés történik helyi gépen, igen praktikus az, ha dupla komment (##) kezdetű sorok kikerülnek a kódsorok közül, és kellően sok kódblokkra tagoljuk a jupyter noteszt, hogy például a pip installt csak a munkakörnyezet kialakításakor futtassuk le, de az egyes részeket külön-külön - dataset beállítása, modell töltése és mentése - meg tudjuk hívni, így ha nem sikerül például a tréningnél a memóriafoglalás, akkor nem kell a modellt újra letölteni.
+
+Jó hangolást! :)
