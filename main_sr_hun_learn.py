@@ -1,11 +1,21 @@
 # a pip kezdetű sorokat alább értelemszerűen a python pip telepítőjével kell futtatni, a környezet konfigurálásakor.
+# ezeket a projektkönyvtár .venv alól kell cmd-ben, vagy a IDE-be ágyazott módon kell futtatni.
+# python.exe -m pip install --upgrade pip
+# pip install flash
 # pip install pytorch-lightning
 # pip install lightning-flash
 # pip install 'lightning-flash[audio,image, video, text]'
 
 # pip install huggingsound
 
+# korábban ez volt: # nem jó már! csak tartaléknak hagytam itt!!!
 # pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
+
+# igazából a python 3.11-es környezetben az alábbi működött jól, hogy utána látta cuda-t:
+# pip install torch==2.1.0 torchtext torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+
+
 
 import pandas as pd
 import random
