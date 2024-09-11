@@ -1,1 +1,20 @@
 # bár a szövegeket ki is kommentezem, azért ésszel hajtsd végre!
+# a pip kezdetű sorokat alább értelemszerűen a python pip telepítőjével kell futtatni, a környezet konfigurálásakor.
+# ezeket a projektkönyvtár .venv alól kell cmd-ben, vagy a IDE-be ágyazott módon kell futtatni.
+
+# ezzel lehet, már megvagy
+python.exe -m pip install --upgrade pip
+
+pip install flash
+
+# mert a pandák cukik
+pip install pandas as pd
+
+# nem, nem az sklearn-t telepíted! (ravasz mi?)
+pip install -U scikit-learn
+
+# véleményes! ha nem ez a megfejtés, azonnal szólj!
+pip install 'lightning-flash[audio,image, video, text]'
+
+# igazából a python 3.11-es környezetben az alábbi működött jól, hogy utána látta cuda-t:
+# pip install torch==2.1.0 torchtext torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
