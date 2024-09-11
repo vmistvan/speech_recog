@@ -6,7 +6,9 @@ English, Hungarian speech recognition
 
 ## Figyelem! Fontos telepítési tudnivalók az install.txt-ben!
 
-### Változás: végigellenőrzöm a python fájlokat, és azok is átfésülésre kerülnek! Lokális használatra felkészítve. Saját tapasztalat szerint a tanítás nagyjából egy 12GB videómemóriával rendelkező cuda képes videokártyát igényel!
+### Változás: végigellenőrzöm a python fájlokat! Lokális használatra felkészítve. Saját tapasztalat szerint a tanítás nagyjából egy 12GB videómemóriával rendelkező cuda képes videokártyát igényel!
+### Változás2: mivel nem akarok saját hangfájlokat felrakni, és te sem feltétlen akarsz stúdiót nyitni, itt van az angol és néhány másik nyelv adatkészlete: https://www.openslr.org/83/
+###
 
 Az angol és a magyar python szkript is megtalálható, ellenben sem a modellek, sem a hangfájlok nem kerültek be, méretgondok miatt.
 A hangfájlok fejlécét mellékeltem mindkét nyelven, az angolt a nevek alapján meg lehet keresni a neten, honnan lehet letölteni, a magyar fájlok elkészítéséhez pedig mintát adnak.
