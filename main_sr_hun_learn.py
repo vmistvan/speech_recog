@@ -1,28 +1,9 @@
-# a pip kezdetű sorokat alább értelemszerűen a python pip telepítőjével kell futtatni, a környezet konfigurálásakor.
-# ezeket a projektkönyvtár .venv alól kell cmd-ben, vagy a IDE-be ágyazott módon kell futtatni.
-# python.exe -m pip install --upgrade pip
-# pip install flash
-# pip install pytorch-lightning
-# pip install lightning-flash
-# pip install 'lightning-flash[audio,image, video, text]'
-
-# pip install huggingsound
-
-# korábban ez volt: # nem jó már! csak tartaléknak hagytam itt!!!
-# pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
-
-# igazából a python 3.11-es környezetben az alábbi működött jól, hogy utána látta cuda-t:
-# pip install torch==2.1.0 torchtext torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-
-
+# a pip kezdetű sorok, és az installálással kapcsolatos infók kikerültek az install.txt-be
 
 import pandas as pd
 import random
 import torch
 import flash
-
-# from huggingsound import SpeechRecognitionModel
 
 from sklearn.model_selection import train_test_split
 from flash import Trainer
@@ -32,15 +13,21 @@ from flash.audio import SpeechRecognitionData, SpeechRecognition
 ## az alábbi szekció biztosít hozzáférést a headerekhez és a hangfájlokhoz
 ## ez a datamodul beállításának szokásos módja, néha belekerül az egész egy külön osztályba.
 ## a datamodul tartalmai a hangfájlok a github korlátai miatt nem kerülnek bele az alkönyvtárba
+
+## MONDOM NINCSENEK BENNE! AZT NEKED KELL ELSZAVALNI, MAJD MEGEDITÁLNI VAGY NEM IS TUDOM.
+
 ## itt pl scottisch_english_female, de a magyar változat betanításához, ami elő van készítve alább
 ## érdemes egy magyar beszédeket tartalmazó könyvtárat létrehozni
 random.seed(10)
 path_txt = "/content/gdrive/MyDrive/Colab Notebooks/"
+# lokális megoldás!!!
+# path_txt = "./common_hungarian_male/"
 
 df_hungarian = pd.read_csv(path_txt+'line_index.csv', header=None, delimiter="/", names=['not_required', 'speech_files', 'targets'])
 df_hungarian = df_hungarian.sample(frac=0.8)
 print(df_hungarian.shape)
 df_hungarian.head()
+
 df_hungarian = df_hungarian[['speech_files', 'targets']]
 df_hungarian['speech_files'] = df_hungarian['speech_files'].str.lstrip()
 df_hungarian['speech_files'] = path_txt+df_hungarian['speech_files'].astype(str) + '.wav'
@@ -80,6 +67,7 @@ trainer = Trainer(max_epochs=10, gpus=-1)
 trainer.finetune(model, datamodule=datamodule, strategy="freeze")
 
 # ez menti a finetune-d modellt.
+# TEHÁT EGYSZER ELMENTED A JÓT, ÉS TÖBBÉ NEM KELL VÉGIGVERGŐDNÖD A FENTIEKEN!
 trainer.save_checkpoint("speech_recognition_model.pt")
 
 ## adatmodul átállítása a szövegfeldolgozáshoz ha már megvolt a finetune korábban,
