@@ -18,3 +18,6 @@ pip install 'lightning-flash[audio,image, video, text]'
 
 # igazából a python 3.11-es környezetben az alábbi működött jól, hogy utána látta cuda-t:
 # pip install torch==2.1.0 torchtext torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# legfontosabb!!! látogasd meg az alábbi oldalt, és töltsd le a megfelelő adatkészletet!
+# https://www.openslr.org/83/
