@@ -4,6 +4,10 @@ English, Hungarian speech recognition
 # English, Hungarian speech recognition
 # Hang szöveggé alakítása angolul és magyarul
 
+## Figyelem! Fontos telepítési tudnivalók az install.txt-ben!
+
+### Változás: végigellenőrzöm a python fájlokat, és azok is átfésülésre kerülnek! Lokális használatra felkészítve. Saját tapasztalat szerint a tanítás nagyjából egy 12GB videómemóriával rendelkező cuda képes videokártyát igényel!
+
 Az angol és a magyar python szkript is megtalálható, ellenben sem a modellek, sem a hangfájlok nem kerültek be, méretgondok miatt.
 A hangfájlok fejlécét mellékeltem mindkét nyelven, az angolt a nevek alapján meg lehet keresni a neten, honnan lehet letölteni, a magyar fájlok elkészítéséhez pedig mintát adnak.
 
