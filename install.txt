@@ -1,3 +1,9 @@
+# Általam használt konfig:
+# Win gép, python 3.11 NVidia szoftver, hozzá cuda telepítése. Windows alatt egyszerű, a leírás alapján
+# Pycharm community, minden projekthez saját venv azaz virtuális enviroment. Ha nagyon összekavarodsz, vagy az újabb taskok már nem férnek össze,
+# akkor új projektet kell csak indítani, nulláról. egyszerűbb projektet váltani, és ugrálni a venv-ek között!
+# mégegyszer! python 3.11 - ha fenn van a 3.12, semmi baj, a Pycharm IDE alatt lehet több Python interpretert is telepíteni, majd kiválasztod, ami kell
+
 # bár a szövegeket ki is kommentezem, azért ésszel hajtsd végre!
 # a pip kezdetű sorokat alább értelemszerűen a python pip telepítőjével kell futtatni, a környezet konfigurálásakor.
 # ezeket a projektkönyvtár .venv alól kell cmd-ben, vagy a IDE-be ágyazott módon kell futtatni.
@@ -16,7 +22,7 @@ pip install -U scikit-learn
 # véleményes! ha nem ez a megfejtés, azonnal szólj!
 pip install 'lightning-flash[audio,image, video, text]'
 
-# igazából a python 3.11-es környezetben az alábbi működött jól, hogy utána látta cuda-t:
+# igazából a python 3.11-es környezetben az alábbi működött jól, hogy utána látta a cuda-t:
 # pip install torch==2.1.0 torchtext torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 # legfontosabb!!! látogasd meg az alábbi oldalt, és töltsd le a megfelelő adatkészletet!
